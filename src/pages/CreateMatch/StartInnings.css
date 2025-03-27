@@ -1,0 +1,73 @@
+
+.start-innings-container {
+    padding-top: 84px; /* Adjust for fixed navbar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 85vh;
+    background-color: white;
+  }
+  
+  .innings-card {
+    width: 90%;
+    max-width: 500px;
+    padding: 30px;
+    text-align: center;
+    background-color: white;
+    border-radius: 12px;
+    border: 3px solid;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .header h2 {
+    color: black;
+    font-size: 1.8rem;
+  }
+  
+  .header .anticon {
+    font-size: 24px;
+    color: black;
+    cursor: pointer;
+  }
+  
+  h3 {
+    color: black;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+  
+  .input-field {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    padding: 10px;
+  }
+  
+  .start-button {
+    font-size: 1.4rem;
+    padding: 12px 20px;
+    width: 100%;
+    background-color:#1e295e;
+    border: none;
+  }
+  
+  .start-button:hover {
+    background-color: #38bade; /* Darker shade for hover effect */
+  }
+
+  /* StartInnings.css */
+.input-field {
+  width: 100%;
+  height: 8vh;
+  margin-bottom: 20px;
+}
+
+.start-button {
+  width: 100%;
+  margin-top: 20px;
+}

@@ -1,0 +1,190 @@
+.cric-pulse-numbers {
+  background: linear-gradient(135deg, #f8f9fa 0%, #d4e4ff 100%); /* More vibrant gradient */
+  padding: 80px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden; /* For any decorative elements */
+}
+
+.cric-pulse-numbers .content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Heading */
+.cric-pulse-numbers h2 {
+  font-size: 2.75rem;
+  color: #1e295e;
+  font-weight: 700;
+  margin-bottom: 50px;
+  letter-spacing: 0.5px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Stats Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.stat-item {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 30px 20px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.stat-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(to right, #3ab5b0, #56317a);
+  opacity: 0.8;
+}
+
+.stat-item h3 {
+  font-size: 1.8rem;
+  color: #1e295e;
+  font-weight: 700;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+.stat-item h3 sup {
+  font-size: 1rem;
+  top: -0.5em;
+}
+
+.stat-item p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+/* Join Text */
+.join-text {
+  font-size: 1.3rem;
+  color: #1e295e;
+  margin-bottom: 30px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+/* Get App Button */
+.get-app-button {
+  background: linear-gradient(45deg, #1e295e, #3ab5b0); /* Gradient button */
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 35px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.get-app-button:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.get-app-button:active {
+  transform: scale(0.95);
+}
+
+/* Responsive Styling */
+
+/* Large Tablets (1024px and below) */
+@media (max-width: 1024px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+  .cric-pulse-numbers h2 {
+    font-size: 2.25rem;
+  }
+  .stat-item h3 {
+    font-size: 1.6rem;
+  }
+  .join-text {
+    font-size: 1.2rem;
+  }
+}
+
+/* Tablets and Small Devices (768px and below) */
+@media (max-width: 768px) {
+  .cric-pulse-numbers {
+    padding: 60px 15px;
+  }
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .cric-pulse-numbers h2 {
+    font-size: 2rem;
+  }
+  .stat-item {
+    padding: 25px 15px;
+  }
+  .stat-item h3 {
+    font-size: 1.5rem;
+  }
+  .stat-item p {
+    font-size: 1rem;
+  }
+  .join-text {
+    font-size: 1.1rem;
+  }
+  .get-app-button {
+    padding: 10px 30px;
+    font-size: 1.1rem;
+  }
+}
+
+/* Mobile Devices (480px and below) */
+@media (max-width: 480px) {
+  .cric-pulse-numbers {
+    padding: 40px 10px;
+  }
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .cric-pulse-numbers h2 {
+    font-size: 1.75rem;
+    margin-bottom: 30px;
+  }
+  .stat-item {
+    padding: 20px;
+  }
+  .stat-item h3 {
+    font-size: 1.4rem;
+  }
+  .stat-item p {
+    font-size: 0.95rem;
+  }
+  .join-text {
+    font-size: 1rem;
+  }
+  .get-app-button {
+    padding: 8px 25px;
+    font-size: 1rem;
+  }
+}

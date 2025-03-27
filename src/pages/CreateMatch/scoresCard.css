@@ -1,0 +1,248 @@
+/* CricketScorecard.css */
+.cricket-app {
+  min-height: 100vh;
+  background-color: white;
+  margin-top: 10px;
+  border: none;
+}
+
+.app-header {
+  background-color: #1e295e;
+  padding: 10px 16px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-text {
+  color: white !important;
+  margin: 0;
+}
+
+/* scoresCard.css */
+.scorecard-container {
+  background: white;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.score-display {
+  font-size: 14px;
+  color: #666;
+}
+
+.scorecard-title {
+  color: #1e295e !important;
+  margin-bottom: 12px !important;
+  display: flex;
+  justify-content: space-between;
+  background-color: #e6f0ff;
+  padding: 8px 12px;
+}
+
+/* Share button container */
+.share-button-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Base styles for share-btn */
+.share-btn {
+  margin-top: 0; /* Remove margin-top since it's now in a flex layout */
+  padding: 4px 10px;
+  font-size: 16px;
+  height: auto;
+  border-radius: 4px;
+  transition: all 0.3s ease; /* Smooth transitions for responsive changes */
+}
+
+/* Base table styles */
+.ant-table {
+  overflow-x: auto;
+}
+
+.ant-table table {
+  width: 100%;
+  min-width: 0;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 400px) {
+  /* Very small screens */
+  .cricket-app {
+    margin-top: 5px;
+    min-height: 90vh;
+    background-color: white;
+    border: none;
+  }
+  .share-btn {
+    padding: 3px 8px;
+    font-size: 14px;
+    min-width: 60px;
+  }
+  .scorecard-title {
+    font-size: 16px !important;
+  }
+  .score-display {
+    font-size: 11px;
+  }
+  .ant-typography h5 {
+    font-size: 14px !important;
+  }
+  .ant-table {
+    font-size: 11px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  /* Mobile devices */
+  .cricket-app {
+    margin-top: 61px;
+    min-height: 90vh;
+    background-color: white;
+    border: none;
+  }
+  .share-btn {
+    padding: 4px 10px;
+    font-size: 15px;
+    min-width: 70px;
+  }
+  .app-header {
+    padding: 8px 12px;
+  }
+  .title-text {
+    font-size: 16px !important;
+  }
+  .scorecard-container {
+    padding: 12px;
+  }
+  .score-display {
+    font-size: 12px;
+    display: block;
+    margin-bottom: 8px;
+  }
+  .ant-btn {
+    font-size: 14px !important;
+    padding: 4px 8px;
+    height: auto;
+  }
+  .ant-table {
+    font-size: 12px;
+  }
+  .ant-table-thead > tr > th {
+    padding: 8px 4px;
+    font-size: 12px;
+  }
+  .ant-table-tbody > tr > td {
+    padding: 8px 4px;
+    font-size: 12px;
+  }
+  .ant-row {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  /* Tablet devices */
+  .cricket-app {
+    margin-top: 66px;
+    min-height: 90vh;
+    background-color: white;
+    border: none;
+  }
+  .share-btn {
+    padding: 5px 12px;
+    font-size: 16px;
+    min-width: 80px;
+  }
+  .app-header {
+    padding: 10px 16px;
+  }
+  .title-text {
+    font-size: 18px !important;
+  }
+  .scorecard-container {
+    padding: 14px;
+  }
+  .score-display {
+    font-size: 13px;
+  }
+  .ant-table-thead > tr > th {
+    padding: 10px 6px;
+  }
+  .ant-table-tbody > tr > td {
+    padding: 10px 6px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  /* Desktop devices */
+  .cricket-app {
+    margin-top: 12px;
+    min-height: 90vh;
+    background-color: white;
+    border: none;
+  }
+  .share-btn {
+    padding: 6px 14px;
+    font-size: 16px;
+    min-width: 90px;
+  }
+  .app-header {
+    padding: 12px 24px;
+  }
+  .title-text {
+    font-size: 20px !important;
+  }
+  .scorecard-container {
+    padding: 16px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .score-display {
+    font-size: 14px;
+  }
+  .ant-table-thead > tr > th {
+    padding: 12px 8px;
+  }
+  .ant-table-tbody > tr > td {
+    padding: 12px 8px;
+  }
+}
+
+/* Large desktop screens (min-width: 1200px) */
+@media screen and (min-width: 1200px) {
+  .share-btn {
+    padding: 6px 16px;
+    font-size: 17px;
+    min-width: 100px;
+  }
+}
+
+/* Hover effect for devices that support it */
+@media (hover: hover) and (pointer: fine) {
+  .share-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* Ensure content doesn't overflow */
+body {
+  overflow-x: hidden;
+}
+
+.ant-layout-content {
+  padding: 0 8px !important;
+}
+
+@media screen and (min-width: 769px) {
+  .ant-layout-content {
+    padding: 0 24px !important;
+  }
+}

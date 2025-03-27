@@ -1,0 +1,32 @@
+/* Custom styles for the card */
+.ant-card {
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom styles for the Google button */
+.google-button {
+  background-color: #db4437;
+  color: white;
+  border: none;
+}
+
+.google-button:hover {
+  background-color: #c23321;
+  color: white;
+}
+
+/* Custom styles for the divider */
+.ant-divider {
+  color: rgba(0, 0, 0, 0.45);
+}
+
+/* Custom styles for the toggle link */
+.toggle-link {
+  color: #1890ff;
+  cursor: pointer;
+}
+
+.toggle-link:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>hiiii</h1>
+    <script>
+         const url = 'https://cricbuzz-cricket.p.rapidapi.com/matches/v1/recent';
+const options = {
+	method: 'GET',
+	headers: {
+		'x-rapidapi-key': 'a4c5f7e5e6msh99d3f16da3914e8p163f9ejsndbcb01a9cad4',
+		'x-rapidapi-host': 'cricbuzz-cricket.p.rapidapi.com'
+	}
+};
+
+      fetch(url)
+      .then((res)=>res.json())
+      .then((data)=>console.log(data));
+      
+    </script>
+</body>
+</html>

@@ -1,0 +1,168 @@
+/* Match Card Container */
+.match-card {
+  width: 100%;
+  max-width: 350px; /* Increased from 300px to 350px */
+  padding: 16px; /* Increased from 12px for better spacing */
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+  box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+.match-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Match Header */
+.match-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.tournament-name {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #666;
+  text-transform: uppercase;
+}
+
+.status-indicator {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.live-dot {
+  width: 8px;
+  height: 8px;
+  background: #ff0000;
+  border-radius: 50%;
+  animation: pulse 1.5s infinite;
+}
+
+.live-text {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #ff0000;
+}
+
+.ended-text {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #666; /* Gray color for "MATCH ENDED" */
+  text-transform: uppercase;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 6px rgba(255, 0, 0, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
+  }
+}
+
+/* Match Info */
+.match-info {
+  font-size: 0.8rem;
+  color: #888;
+  margin-bottom: 8px;
+}
+
+/* Teams Section */
+.teams-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  flex: 1;
+}
+
+.team-logo {
+  width: 48px; /* Increased from 40px */
+  height: 48px; /* Increased from 40px */
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.team-name {
+  font-size: 1.1rem; /* Increased from 1rem */
+  font-weight: 700;
+  color: #333;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.score {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #28a745; /* Green for score */
+}
+
+.status {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #666;
+}
+
+/* Toss Info and Result */
+.toss-info {
+  font-size: 0.8rem;
+  color: #888;
+  text-align: center;
+}
+
+.result-text {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 340px) {
+  .match-card {
+    max-width: 100%;
+    padding: 12px; /* Adjusted for smaller screens */
+  }
+
+  .tournament-name,
+  .live-text,
+  .ended-text {
+    font-size: 0.8rem;
+  }
+
+  .match-info,
+  .toss-info,
+  .result-text {
+    font-size: 0.75rem;
+  }
+
+  .team-logo {
+    width: 40px; /* Adjusted from 36px */
+    height: 40px;
+  }
+
+  .team-name {
+    font-size: 1rem; /* Adjusted from 0.9rem */
+  }
+
+  .score,
+  .status {
+    font-size: 0.85rem;
+  }
+}

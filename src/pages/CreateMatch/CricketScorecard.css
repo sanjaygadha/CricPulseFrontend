@@ -1,0 +1,190 @@
+/* CricketScorecard.css */
+
+.cricket-app {
+    min-height: 100vh;
+    background-color: white;
+    color: #333;
+    border: 2px solid;
+    border-radius: 8px;
+  }
+  
+  .app-header {
+    background-color: white;
+    padding-left: 16px;
+    padding-right: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #eaeaea;
+    margin-top: 80px; /* Add margin to create space after navbar */
+    height: 64px;
+    width: 100%;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1); /* Optional for better UI */
+  }
+  
+  .title-text {
+    font-size: 18px;
+    color: #1e295e;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .home-button {
+    background-color: #1e295e;
+    color: white;
+  }
+  
+  /* Make header responsive */
+  @media (max-width: 768px) {
+    .app-header {
+      padding-left: 8px;
+      padding-right: 8px;
+      height: 56px;
+      margin-top: 8px;
+    }
+  
+    .title-text {
+      font-size: 14px;
+      text-align: center;
+      flex-grow: 1;
+    }
+  
+    .home-button {
+      width: 32px;
+      height: 32px;
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .app-header {
+      height: 48px;
+      margin-top: 8px;
+    }
+  
+    .title-text {
+      font-size: 12px;
+    }
+  
+    .home-button {
+      width: 28px;
+      height: 28px;
+    }
+  }
+  
+  
+  .scorecard-button {
+    background-color: #1e295e;
+    width: 180px;
+    height: 50px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+  }
+  
+  .action-button {
+    background-color: #1e295e;
+    color: white;
+    height: 50px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+  }
+  .end-button{
+    background-color: #1e295e !important;
+    color: white !important;
+    height: 50px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+
+  }
+  
+
+  .score-button {
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    font-size: 20px;
+    color: #333;
+    background-color: transparent;
+    border-color: #d9d9d9;
+  }
+  
+  .score-button:hover {
+    background-color: #f5f5f5;
+    border-color: #1e295e;
+  }
+  
+  .purple-text {
+    color: #1e295e;
+  }
+  
+  .dark-text {
+    color: #333;
+  }
+  
+  .score-display {
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .label-text {
+    font-size: 18px;
+    color: #333;
+  }
+  
+  /* Table styling */
+  .cricket-table {
+    background-color: transparent;
+    margin-bottom: 16px;
+  }
+  
+  .cricket-table .ant-table {
+    background-color: white !important;
+    color: #333 !important;
+  }
+  
+  .cricket-table .ant-table-thead > tr > th {
+    background-color: #f5f5f5 !important;
+    color: #333 !important;
+    border-bottom: 1px solid #eaeaea;
+  }
+  
+  .cricket-table .ant-table-tbody > tr > td {
+    border-bottom: 1px solid #eaeaea;
+    color: #333 !important;
+    background-color: white !important;
+  }
+  
+  .cricket-table .ant-table-tbody > tr:hover > td {
+    background-color: #f5f5f5 !important;
+  }
+  
+  /* Checkbox styling */
+  .cricket-checkbox {
+    color: #333 !important;
+  }
+  
+  .cricket-checkbox .ant-checkbox-inner {
+    background-color: white;
+    border-color: #d9d9d9;
+  }
+  
+  .cricket-checkbox .ant-checkbox-checked .ant-checkbox-inner {
+    background-color: #1e295e;
+    border-color: #1e295e;
+  }
+  
+  /* For the extras info at bottom */
+  .extras-info {
+    color: #333;
+    display: block;
+    text-align: center;
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }

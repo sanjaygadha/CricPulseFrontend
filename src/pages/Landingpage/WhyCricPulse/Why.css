@@ -1,0 +1,78 @@
+/* Why CricHeroes Section */
+.why-cric-heroes {
+    /* background-image: url('https://cricheroes-media-mumbai.s3.ap-south-1.amazonaws.com/cricheroes_website_new/why-cricheres-featuers-images-1.png?width=1920&quality=100&format=auto'); */
+    background-size: cover;
+    background-position: center;
+    padding: 60px 20px;
+    text-align: center;
+    color: #fff; /* White text for better contrast */
+  }
+  
+  .why-cric-heroes .content {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+    padding: 40px;
+    border-radius: 10px;
+  }
+  
+  .why-cric-heroes h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+  }
+  
+  /* Features Grid */
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 20px; /* Space between grid items */
+  }
+  
+  .feature-item {
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+    border-radius: 10px;
+    padding: 20px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .feature-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .feature-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #ffd700; /* Gold color for headings */
+  }
+  
+  .feature-item p {
+    font-size: 1rem;
+    color: #ddd; /* Light gray for text */
+  }
+  
+  /* Responsive Styling */
+  @media (max-width: 768px) {
+    .features-grid {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+    }
+  
+    .why-cric-heroes h2 {
+      font-size: 2rem;
+    }
+  
+    .feature-item h3 {
+      font-size: 1.3rem;
+    }
+  
+    .feature-item p {
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .features-grid {
+      grid-template-columns: 1fr; /* 1 column on mobile */
+    }
+  }

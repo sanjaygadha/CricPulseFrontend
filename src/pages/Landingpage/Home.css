@@ -1,0 +1,70 @@
+/* Home.css */
+
+.home-container {
+    min-height: 100vh;
+    min-width: 100%;
+    padding-top: 64px; /* Adjust for fixed navbar */
+
+  }
+  .explore-btn{
+  background-color: #1e295e; /* Dark blue from your inline style */
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-transform: uppercase; /* Matches the app’s bold style */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .hero-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f0f2f5;
+  }
+  
+  .features-section {
+    padding: 50px 20px;
+  }
+  .feature-heading{
+    text-align: center;
+  }
+  
+  .features-section .ant-card {
+    text-align: center;
+  }
+  
+  .features-section .ant-card .anticon {
+    font-size: 48px;
+    color: #1890ff;
+  }
+  
+  .testimonials-section {
+    padding: 50px 20px;
+    background-color: #f0f2f5;
+  }
+  
+  .testimonials-section .ant-card {
+    text-align: center;
+  }
+  
+  .cta-section {
+    background-color: #1890ff;
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .cta-section .ant-btn {
+    background-color: white;
+    color: #1890ff;
+  }
+  
+  .footer {
+    /* border: 2px solid ; */
+    text-align: center;
+    background-color: #001529;
+    color: rgb(192, 56, 56);
+    padding: 20px;
+      }

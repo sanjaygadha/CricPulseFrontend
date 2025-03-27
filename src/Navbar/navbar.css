@@ -1,0 +1,187 @@
+/* Navbar container */
+.navbar-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: #1e295e;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+/* Logo container */
+.logo-container {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+
+/* Logo image */
+.logo-image {
+  border-radius: 50%;
+  margin-right: 10px;
+  height: 50px;
+}
+
+/* Logo text */
+.logo-text {
+  margin: 0;
+  font-size: 24px;
+  color: white;
+}
+
+/* Desktop menu container */
+.desktop-menu-container {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 20px;
+}
+
+/* Desktop menu */
+.desktop-menu {
+  flex: 1;
+  border-bottom: none;
+  background: transparent;
+  line-height: 64px;
+}
+
+.desktop-menu .ant-menu-item {
+  color: white;
+  font-size: 18px;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.3s ease; /* Only transition the border */
+}
+
+.desktop-menu .ant-menu-item:hover {
+  color: rgb(187 247 208) !important; /* Light green on hover, instant */
+  background: transparent !important;
+  transition: border-bottom 0.3s ease; /* Only border transitions */
+}
+
+.desktop-menu .ant-menu-item.ant-menu-item-selected {
+  background: transparent !important;
+  border-bottom: 2px solid rgb(255, 215, 0); /* Gold underline for active */
+  color: rgb(255, 215, 0) !important; /* Gold text for active, persists */
+  transition: border-bottom 0.3s ease; /* Smooth border, no color transition */
+}
+
+/* Remove :active to avoid confusion with selected state */
+.desktop-menu .ant-menu-item:active {
+  background: transparent !important;
+}
+
+/* Mobile menu button */
+.mobile-menu-button {
+  color: white;
+  font-size: 20px;
+  bottom: 10px;
+  transition: color 0s;
+}
+
+.mobile-menu-button:hover {
+  color: rgb(187 247 208);
+}
+
+/* User icon */
+.user-icon {
+  color: white;
+  bottom: 3px;
+  transition: color 0s;
+}
+
+.user-icon:hover {
+  color: rgb(187 247 208);
+}
+
+/* Increase size of the user icon */
+.user-icon .anticon {
+  font-size: 30px;
+}
+
+/* Style for the dropdown menu */
+.ant-dropdown-menu {
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.ant-dropdown-menu-item {
+  color: rgb(17 24 39);
+  font-size: 14px;
+  padding: 8px 16px;
+  transition: background 0.3s ease, color 0s;
+}
+
+.ant-dropdown-menu-item:hover {
+  background-color: rgb(249 250 251);
+  color: rgb(187 247 208);
+}
+
+/* Mobile drawer */
+.ant-drawer {
+  z-index: 1001;
+}
+
+.ant-drawer-header {
+  background: #1e295e;
+  border-bottom: none;
+}
+
+.ant-drawer-title {
+  color: white;
+}
+
+.ant-drawer-body {
+  padding: 0;
+}
+
+/* Mobile drawer menu */
+.ant-drawer .ant-menu {
+  background: transparent;
+}
+
+.ant-drawer .ant-menu-item {
+  color: rgb(17 24 39);
+  font-size: 16px;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.3s ease; /* Only transition the border */
+}
+
+.ant-drawer .ant-menu-item:hover {
+  color: rgb(187 247 208) !important; /* Light green on hover, instant */
+  background: transparent !important;
+  transition: border-bottom 0.3s ease; /* Only border transitions */
+}
+
+.ant-drawer .ant-menu .ant-menu-item.ant-menu-item-selected {
+  color: rgb(255, 215, 0) !important; /* Gold text for active, persists */
+  background: transparent !important;
+  border-bottom: 2px solid rgb(255, 215, 0) !important; /* Gold underline for active */
+  transition: border-bottom 0.3s ease; /* Smooth border, no color transition */
+}
+
+/* Remove :active to avoid confusion */
+.ant-drawer .ant-menu-item:active {
+  background: transparent !important;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .logo-text {
+    margin: 0;
+    font-size: 18px;
+    color: white;
+  }
+  
+  .logo-image {
+    border-radius: 50%;
+    margin-right: 10px;
+    height: 40px;
+  }
+}

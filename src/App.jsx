@@ -7,7 +7,7 @@ import StartInnings from "./pages/CreateMatch/startInnings"; // Import StartInni
 // import Scorecard from "./pages/CreateMatch/ScoreCrad";
 import Toss from "./pages/Toss/Toss";
 import UserProfile from "./pages/Profile/UserProfile";
-import TeamSetup from "./pages/CreateMatch/Teamcompo/TeamSetup";
+
 import LoginPage from "./pages/Login/LoginPage";
 import ContactUs from "./pages/ContactUs/ContactUs";
 import Scoreboard from "./pages/CreateMatch/ScoreBoard";
@@ -27,7 +27,7 @@ const App = () => {
         <Route path="/scoreboard/:matchID" element={<Scoreboard/>}></Route>
         <Route path="/toss" element={<Toss/>}></Route>
         <Route path="/profile" element={<UserProfile/>}></Route>
-        <Route path="/teamsetup" element={<TeamSetup/>} ></Route>
+
         <Route path="/contact" element={<ContactUs/>}></Route>
         <Route path="/scoresCard/:matchID" element={<ScoresCard/>}></Route>
       </Routes>

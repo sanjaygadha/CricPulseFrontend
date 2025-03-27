@@ -15,7 +15,7 @@ const LiveMatches = () => {
   useEffect(() => {
     const fetchMatches = async () => {
       try {
-        const response = await fetch('https://cricpulsebackend.onrender.com/api/matches/getmatch');
+        const response = await fetch('http://localhost:5000/api/matches/getmatch');
         if (!response.ok) {
           throw new Error('Failed to fetch matches');
         }

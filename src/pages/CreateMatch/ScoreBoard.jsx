@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { Navigate, useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
+import { Base_URL } from "../../API/constants";
 import {
   Layout,
   Button,
@@ -149,7 +150,7 @@ const Scoreboard = () => {
   
       // Send the data to the backend
       console.log("Sending scoreboard data:", scoreboardData); // Debug log
-      const response = await axios.put(`http://localhost:5000/api/matches/${MatchId}/scoreboard`, scoreboardData);
+      const response = await axios.put(`${Base_URL}/api/matches/${MatchId}/scoreboard`, scoreboardData);
       console.log("Response:", response.data); // Debug log
       // message.success("Scoreboard data saved successfully!");
       // Update local state based on response
@@ -244,7 +245,7 @@ const Scoreboard = () => {
     const fetchPlayers = async () => {
       try {
         const team1Response = await axios.get(
-          `http://localhost:5000/api/matches/selectPlayers/${team1}/${MatchId}`
+          `${Base_URL}/api/matches/selectPlayers/${team1}/${MatchId}`
         );
         const fetchedTeam1Players = team1Response.data.players.map((player, index) => ({
           key: `${index + 1}`,
@@ -253,7 +254,7 @@ const Scoreboard = () => {
         }));
 
         const team2Response = await axios.get(
-          `http://localhost:5000/api/matches/selectPlayers/${team2}/${MatchId}`
+          `${Base_URL}/api/matches/selectPlayers/${team2}/${MatchId}`
         );
         const fetchedTeam2Players = team2Response.data.players.map((player, index) => ({
           key: `${index + 1}`,
@@ -261,7 +262,7 @@ const Scoreboard = () => {
           tag: player.tag || player.role || "",
         }));
 
-        const response = await axios.get(`http://localhost:5000/api/matches/${MatchId}`);
+        const response = await axios.get(`${Base_URL}/api/matches/${MatchId}`);
         const { totalOvers } = response.data.data;
 
         setTeam1Players(fetchedTeam1Players);

@@ -4,6 +4,7 @@
 import './MatchCard.css';
 import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import { Base_URL } from '../../API/constants';
 
 const MatchCard = ({ match, matchId }) => {
   const navigate = useNavigate();
@@ -24,7 +25,7 @@ const MatchCard = ({ match, matchId }) => {
   useEffect(() => {
     const fetchLiveData = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/api/matches/${matchId}/scoreboard`);
+        const response = await fetch(`${Base_URL}/api/matches/${matchId}/scoreboard`);
         if (!response.ok) {
           throw new Error('Failed to fetch live match data');
         }

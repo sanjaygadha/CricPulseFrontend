@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { Input, Button, Card, message, Select } from "antd";
 import { HomeOutlined, ArrowLeftOutlined } from "@ant-design/icons";
 import { useLocation, useNavigate } from "react-router-dom";
+import { Base_URL } from "../../API/constants";
 import axios from "axios"; // For making API requests
 import "./StartInnings.css"; // Import the CSS file
 
@@ -31,14 +32,14 @@ const StartInnings = () => {
       setLoading(true);
       try {
         // Fetch players for Team 1
-        const team1Response = await axios.get(`http://localhost:5000/api/matches/selectPlayers/${team1}/${MatchId}`);
+        const team1Response = await axios.get(`${Base_URL}/api/matches/selectPlayers/${team1}/${MatchId}`);
         // setTeam1Players(team1Response.data);
 
         setTeam1Players(Array.isArray(team1Response.data.players) ? team1Response.data.players : []);
 
 
         // Fetch players for Team 2
-        const team2Response = await axios.get(`http://localhost:5000/api/matches/selectPlayers/${team2}/${MatchId}`);
+        const team2Response = await axios.get(`${Base_URL}/api/matches/selectPlayers/${team2}/${MatchId}`);
         // setTeam2Players(team2Response.data);
         setTeam2Players(Array.isArray(team2Response.data.players) ? team2Response.data.players : []);
 

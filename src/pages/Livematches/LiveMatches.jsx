@@ -3,6 +3,7 @@ import { Spin } from 'antd';
 import MatchCard from './MatchCard';
 import './LiveMatches.css';
 import { debounce } from 'lodash'; // Import debounce from lodash
+import { Base_URL } from '../../API/constants';
 
 const LiveMatches = () => {
   const [matches, setMatches] = useState([]);
@@ -15,7 +16,7 @@ const LiveMatches = () => {
   useEffect(() => {
     const fetchMatches = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/matches/getmatch');
+        const response = await fetch(`${Base_URL}/api/matches/getmatch`);
         if (!response.ok) {
           throw new Error('Failed to fetch matches');
         }

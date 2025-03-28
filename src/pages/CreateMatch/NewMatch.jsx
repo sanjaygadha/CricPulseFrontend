@@ -12,6 +12,7 @@ import {
   TimePicker,
 } from "antd";
 import { useNavigate, useLocation } from "react-router-dom";
+import { Base_URL } from "../../API/constants";
 import axios from "axios";
 import "./Newmatch.css";
 
@@ -150,7 +151,7 @@ const NewMatch = () => {
       console.log("sending data:",matchData)
 
       const response = await axios.post(
-        "http://localhost:5000/api/matches/creatematch",
+        `${Base_URL}/api/matches/creatematch`,
         matchData,
         {
           headers: {

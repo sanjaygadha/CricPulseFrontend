@@ -1,5 +1,6 @@
 import  { useState, useEffect } from 'react';
 import './UserNumbers.css';
+import { Base_URL } from '../../../API/constants';
 
 const UserNumbers = () => {
   // State for matches, tournaments, users, and first match date
@@ -13,7 +14,7 @@ const UserNumbers = () => {
   // Fetch matches data and calculate stats
   const fetchMatchStats = async () => {
     try {
-      const matchResponse = await fetch('http://localhost:5000/api/matches/getmatch');
+      const matchResponse = await fetch(`${Base_URL}/api/matches/getmatch`);
       if (!matchResponse.ok) throw new Error('Failed to fetch match data');
       const matchData = await matchResponse.json();
 
@@ -38,7 +39,7 @@ const UserNumbers = () => {
   // Fetch users data
   const fetchUserStats = async () => {
     try {
-      const userResponse = await fetch('http://localhost:5000/api/auth/getAllUsers');
+      const userResponse = await fetch(`${Base_URL}/api/auth/getAllUsers`);
       if (!userResponse.ok) throw new Error('Failed to fetch user data');
       const userData = await userResponse.json();
       setTotalUsers(userData.length); // Assuming API returns an array

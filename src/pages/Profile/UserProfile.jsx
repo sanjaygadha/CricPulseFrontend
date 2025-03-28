@@ -25,6 +25,7 @@ import {
   UploadOutlined,
 } from "@ant-design/icons";
 import { useNavigate } from "react-router-dom";
+import { Base_URL } from "../../API/constants";
 
 const { Title, Text } = Typography;
 const { confirm } = Modal;
@@ -125,7 +126,7 @@ const UserProfile = () => {
 
       setLoading(true);
       try {
-        const response = await fetch("http://localhost:5000/api/auth/getuser", {
+        const response = await fetch(`${Base_URL}/api/auth/getuser`, {
           method: "GET",
           headers: { "x-auth-token": token },
         });
@@ -167,7 +168,7 @@ const UserProfile = () => {
       setLoading(true);
       try {
         const response = await fetch(
-          `http://localhost:5000/api/matches/createdBy/${createdById}`,
+          `${Base_URL}/api/matches/createdBy/${createdById}`,
           {
             method: "GET",
             headers: { "x-auth-token": localStorage.getItem("token") },
@@ -225,7 +226,7 @@ const UserProfile = () => {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/auth/updateprofile",
+        `${Base_URL}/api/auth/updateprofile`,
         {
           method: "PUT",
           headers: { "x-auth-token": token },
@@ -264,7 +265,7 @@ const UserProfile = () => {
         setLoading(true);
         try {
           const response = await fetch(
-            `http://localhost:5000/api/matches/${matchId}`,
+            `${Base_URL}/api/matches/${matchId}`,
             {
               method: "DELETE",
               headers: { "x-auth-token": token },
@@ -317,7 +318,7 @@ const UserProfile = () => {
   if (!user) return null;
 
   const avatarSrc = user.profilePicture
-    ? `http://localhost:5000${user.profilePicture}?t=${Date.now()}`
+    ? `${Base_URL}${user.profilePicture}?t=${Date.now()}`
     : null;
 
   return (

@@ -3,6 +3,7 @@ import AuthForm from "./AuthForm";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { message } from "antd"; // Import message from antd for toast notifications
+import { Base_URL } from "../../API/constants";
 
 const LoginPage = () => {
   const [isLogin, setIsLogin] = useState(false);
@@ -13,7 +14,7 @@ const LoginPage = () => {
     if (isLogin) {
       try {
         const response = await axios.post(
-          "http://localhost:5000/api/auth/login",
+          `${Base_URL}/api/auth/login`,
           values
         );
         console.log("Login successful:", response.data);
@@ -27,7 +28,7 @@ const LoginPage = () => {
     } else {
       try {
         const response = await axios.post(
-          "http://localhost:5000/api/auth/register",
+          `${Base_URL}/api/auth/register`,
           values
         );
         console.log("Registration successful:", response.data);
@@ -53,14 +54,14 @@ const LoginPage = () => {
 
       // Register the guest account
       const registerResponse = await axios.post(
-        "http://localhost:5000/api/auth/register",
+       `${Base_URL}/api/auth/register`,
         guestCredentials
       );
       console.log("Guest registration successful:", registerResponse.data);
 
       // Login with guest credentials
       const loginResponse = await axios.post(
-        "http://localhost:5000/api/auth/login",
+        `${Base_URL}/api/auth/login`,
         {
           email: guestCredentials.email,
           password: guestCredentials.password,

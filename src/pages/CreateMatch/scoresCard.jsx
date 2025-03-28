@@ -1,5 +1,6 @@
-import { useLocation } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { Base_URL } from "../../API/constants";
 import axios from "axios";
 import {
   Layout,
@@ -22,13 +23,17 @@ const ScoresCard = () => {
   const [error, setError] = useState(null);
   const [matchData, setMatchData] = useState(null);
 
-  const location = useLocation();
-  const { matchId } = location.state || {};
-
+  // const location = useLocation();
+  // const { matchId } = location.state || {};
+  
+  // const location = useParams();
+  const {matchID} = useParams()
+  // const { matchId } = location.state || {};
+  // console.log(matchID)
   const fetchScorecardData = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:5000/api/matches/${matchId}/scoreboard`
+        `${Base_URL}/api/matches/${matchID}/scoreboard`
       );
       const { data } = response.data;
       setMatchData(data);
@@ -42,14 +47,14 @@ const ScoresCard = () => {
   };
 
   useEffect(() => {
-    if (matchId) {
+    if (matchID) {
       fetchScorecardData();
       const intervalId = setInterval(() => {
         fetchScorecardData();
       }, 2000);
       return () => clearInterval(intervalId);
     }
-  }, [matchId]);
+  }, [matchID]);
 
   const handleShare = () => {
     if (!matchData) return;
@@ -57,7 +62,7 @@ const ScoresCard = () => {
     const { team1, team2, firstInningsData, innings, matchComplete } = matchData;
     const matchSummary = `
 🏏 CricPulse Match Summary 🏏
-🏟 Match ID: ${matchId}
+🏟 Match ID: ${matchID}
 👥 Teams: ${team1} vs ${team2}
 ✅ ${team1} - ${firstInningsData.score}/${firstInningsData.wickets}
 ✅ ${team2} - ${innings.score}/${innings.wickets}
